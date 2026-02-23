@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="hero">
+    <h1>{{ .Site.Params.description }}</h1>
+    <p>{{ .Site.Params.tagline }}</p>
+</section>
+
+<div class="categories-container">
+    {{ range .Site.Params.categories }}
+        {{ partial "category.html" (dict "category" . "context" $) }}
+    {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,16 @@
+<div class="app-card" data-slug="{{ .File.ContentBaseName }}">
+    <div class="info-icon" onclick="showAppInfo('{{ .File.ContentBaseName }}')">
+        <img src="https://www.figma.com/api/mcp/asset/1f8743ac-8cf8-4e47-b47e-931d7462f2d4" alt="Info">
+    </div>
+    <div class="app-icon-container">
+        <img src="{{ .Params.icon_link }}" alt="{{ .Title }}" class="app-icon">
+    </div>
+    <div class="app-details">
+        <h3>{{ .Title }}</h3>
+        <p class="tagline">{{ .Params.tagline }}</p>
+        <p class="replaces">Replaces: {{ .Params.replaces }}</p>
+    </div>
+    <div class="add-button-container">
+        <button class="add-button" onclick="addApp('{{ .File.ContentBaseName }}')">Add</button>
+    </div>
+</div>

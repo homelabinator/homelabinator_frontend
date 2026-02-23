@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="app-info-page">
+    <div class="app-info-modal">
+        <div class="app-info-left">
+             <div class="app-info-header">
+                <img src="{{ .Params.icon_link }}" alt="{{ .Title }}" width="268">
+                <h1>{{ .Title }}</h1>
+            </div>
+            <img src="{{ index .Params.screenshots 0 }}" alt="Screenshot" class="screenshot-main">
+        </div>
+        <div class="app-info-right">
+            <div class="app-info-desc">
+                {{ .Params.long_description }}
+            </div>
+            
+            <div class="app-markdown-content">
+                {{ .Content }}
+            </div>
+            
+            <div class="app-stats">
+                <p>GitHub Stars: {{ .Params.github_stars }}</p>
+                <p>Docker Downloads: {{ .Params.docker_downloads }}</p>
+                <p>Size Requirements: Based on Media</p>
+            </div>
+
+            <div class="app-links app-card" data-slug="{{ .File.ContentBaseName }}">
+                <button class="add-button" onclick="addApp('{{ .File.ContentBaseName }}')" style="width: 100%; margin-top: 20px;">Add</button>
+                <a href="{{ .Params.website }}" class="action-btn" style="font-size: 32px; margin-top: 20px; display: block; text-decoration: none; text-align: center;">Official Website</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

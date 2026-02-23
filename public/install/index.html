@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Install Screen | HomeLabinator</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=SF+Pro+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <a href="/" style="text-decoration: none; color: inherit;"><h1 class="logo">HomeLabinator</h1></a>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <img src="https://www.figma.com/api/mcp/asset/d8d8e99a-2e92-4b3d-9725-54326d0d0990" alt="Search" class="search-icon">
+                <input type="text" placeholder="Search for Apps and Replacements">
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com" class="header-btn">Github</a>
+            <a href="#" class="header-btn">About</a>
+        </div>
+    </header>
+
+    <main>
+        
+<div class="install-screen">
+    <div class="install-container">
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-circle" style="background: url('https://www.figma.com/api/mcp/asset/123a49e3-b6dd-401c-a046-6fbb0301d06d'); background-size: cover;"></div>
+                <h3>1. Prepare</h3>
+                <p>Insert a USB drive into <strong>this</strong> computer. Locate an old computer you wish to revive.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-circle" style="background: url('https://www.figma.com/api/mcp/asset/767def14-6bcc-438b-b146-05d84e492166'); background-size: cover;"></div>
+                <h3>2. Download</h3>
+                <p>Download the ISO file using the button below</p>
+            </div>
+            <div class="step-card">
+                <div class="step-circle" style="background: url('https://www.figma.com/api/mcp/asset/ad8a976e-83bf-48e6-b629-e9c8d549f2be'); background-size: cover;"></div>
+                <h3>3. Flash</h3>
+                <p>Open <u>Balena Etcher</u>. Select the downloaded ISO and your USB drive.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-circle" style="background: url('https://www.figma.com/api/mcp/asset/3d16cf95-9690-465b-915d-e5b881069ec5'); background-size: cover;"></div>
+                <h3>4. Boot</h3>
+                <p>Eject USB and plug it into the <strong>old</strong> computer. Turn it on and press the Boot Menu key (usually F12 or Del).</p>
+            </div>
+        </div>
+
+        <div class="install-actions">
+            <button class="action-btn">Download</button>
+            <button class="action-btn">Flash</button>
+            <button class="action-btn" style="font-size: 40px;">Having trouble..?</button>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <div id="next-button" class="next-button-container hidden">
+        <button onclick="getDownloadLink()" class="next-btn">
+            Next
+            <img src="https://www.figma.com/api/mcp/asset/dfdbd61c-a2ec-444d-a161-54bd940ef5b8" alt="Next" class="next-icon">
+        </button>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

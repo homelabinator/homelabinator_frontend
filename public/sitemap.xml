@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/apps/</loc>
+    <lastmod>2026-02-22T20:18:44-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-22T20:18:44-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/apps/immich/</loc>
+    <lastmod>2026-02-22T20:18:44-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/apps/jellyfin/</loc>
+    <lastmod>2026-02-22T20:18:44-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/apps/n8n/</loc>
+    <lastmod>2026-02-22T20:18:44-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/apps/navidrome/</loc>
+    <lastmod>2026-02-22T20:18:44-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/apps/nextcloud/</loc>
+    <lastmod>2026-02-22T20:18:44-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/apps/uptime-kuma/</loc>
+    <lastmod>2026-02-22T20:18:44-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/install/</loc>
+  </url>
+</urlset>

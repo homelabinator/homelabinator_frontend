@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immich | HomeLabinator</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=SF+Pro+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-left">
+            <a href="/" style="text-decoration: none; color: inherit;"><h1 class="logo">HomeLabinator</h1></a>
+        </div>
+        <div class="header-center">
+            <div class="search-bar">
+                <img src="https://www.figma.com/api/mcp/asset/d8d8e99a-2e92-4b3d-9725-54326d0d0990" alt="Search" class="search-icon">
+                <input type="text" placeholder="Search for Apps and Replacements">
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com" class="header-btn">Github</a>
+            <a href="#" class="header-btn">About</a>
+        </div>
+    </header>
+
+    <main>
+        
+<div class="app-info-page">
+    <div class="app-info-modal">
+        <div class="app-info-left">
+             <div class="app-info-header">
+                <img src="https://www.figma.com/api/mcp/asset/dfdbd61c-a2ec-444d-a161-54bd940ef5b8" alt="Immich" width="268">
+                <h1>Immich</h1>
+            </div>
+            <img src="https://www.figma.com/api/mcp/asset/dfdbd61c-a2ec-444d-a161-54bd940ef5b8" alt="Screenshot" class="screenshot-main">
+        </div>
+        <div class="app-info-right">
+            <div class="app-info-desc">
+                Immich is a high performance self-hosted photo and video backup solution.
+            </div>
+            
+            <div class="app-markdown-content">
+                <p>Immich photo backup.</p>
+
+            </div>
+            
+            <div class="app-stats">
+                <p>GitHub Stars: 30k</p>
+                <p>Docker Downloads: 500k &#43;</p>
+                <p>Size Requirements: Based on Media</p>
+            </div>
+
+            <div class="app-links app-card" data-slug="immich">
+                <button class="add-button" onclick="addApp('immich')" style="width: 100%; margin-top: 20px;">Add</button>
+                <a href="https://immich.app" class="action-btn" style="font-size: 32px; margin-top: 20px; display: block; text-decoration: none; text-align: center;">Official Website</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <div id="next-button" class="next-button-container hidden">
+        <button onclick="getDownloadLink()" class="next-btn">
+            Next
+            <img src="https://www.figma.com/api/mcp/asset/dfdbd61c-a2ec-444d-a161-54bd940ef5b8" alt="Next" class="next-icon">
+        </button>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

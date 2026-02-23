@@ -1,0 +1,17 @@
+<section class="category-pane" style="--cat-color: {{ .category.color }};">
+    <div class="category-header">
+        <h2>{{ .category.name }}</h2>
+    </div>
+    <div class="category-content" style="max-width: {{ mul .category.max_width 300 }}px;">
+        <div class="apps-grid">
+            {{ $apps := where .context.Site.RegularPages "Section" "apps" }}
+            {{ $filtered := where $apps "Params.category" .category.name }}
+            {{ range $filtered }}
+                {{ partial "app-card.html" . }}
+            {{ end }}
+        </div>
+        <div class="show-more-container">
+            <button class="show-more-btn">Show more</button>
+        </div>
+    </div>
+</section>

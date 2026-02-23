@@ -1,0 +1,22 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'HomeLabinator'
+
+[params]
+  description = "The easiest way to selfhost."
+  tagline = "Create your own homelab OS"
+
+[[params.categories]]
+  name = "Entertainment"
+  color = "#ee5a62"
+  max_width = 5 # max apps in a row? or max width for the category? "max app width" might mean max columns.
+
+[[params.categories]]
+  name = "Productivity"
+  color = "#bfbeff"
+  max_width = 2
+
+[[params.categories]]
+  name = "Utility"
+  color = "#b0e6c3"
+  max_width = 3
