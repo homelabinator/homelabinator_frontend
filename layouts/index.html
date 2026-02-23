@@ -4,7 +4,7 @@
     <p>{{ .Site.Params.tagline }}</p>
 </section>
 
-<div class="categories-container">
+<div class="categories-container grid-5">
     {{ range .Site.Params.categories }}
         {{ partial "category.html" (dict "category" . "context" $) }}
     {{ end }}

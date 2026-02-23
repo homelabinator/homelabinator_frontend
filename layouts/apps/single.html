@@ -1,12 +1,32 @@
 {{ define "main" }}
 <div class="app-info-page">
+    <a href="/" class="close-btn">
+        <img src="https://www.figma.com/api/mcp/asset/1593f0ea-fb06-48d1-bdf2-e0c063c7721f" alt="Close">
+    </a>
     <div class="app-info-modal">
         <div class="app-info-left">
              <div class="app-info-header">
-                <img src="{{ .Params.icon_link }}" alt="{{ .Title }}" width="268">
+                <div class="app-icon-container">
+                    <img src="{{ .Params.icon_link }}" alt="{{ .Title }}" width="268" class="app-icon">
+                </div>
                 <h1>{{ .Title }}</h1>
             </div>
-            <img src="{{ index .Params.screenshots 0 }}" alt="Screenshot" class="screenshot-main">
+            
+            <div class="screenshot-container">
+                {{ if gt (len .Params.screenshots) 1 }}
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        {{ range $index, $shot := .Params.screenshots }}
+                        <img src="{{ $shot }}" alt="Screenshot {{ $index }}" class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+                        {{ end }}
+                    </div>
+                    <button class="carousel-prev" onclick="moveCarousel(-1)">&#10094;</button>
+                    <button class="carousel-next" onclick="moveCarousel(1)">&#10095;</button>
+                </div>
+                {{ else }}
+                <img src="{{ index .Params.screenshots 0 }}" alt="Screenshot" class="screenshot-main">
+                {{ end }}
+            </div>
         </div>
         <div class="app-info-right">
             <div class="app-info-desc">
@@ -24,7 +44,7 @@
             </div>
 
             <div class="app-links app-card" data-slug="{{ .File.ContentBaseName }}">
-                <button class="add-button" onclick="addApp('{{ .File.ContentBaseName }}')" style="width: 100%; margin-top: 20px;">Add</button>
+                <button class="add-button" onclick="addAppAndReturn('{{ .File.ContentBaseName }}')" style="width: 100%; margin-top: 20px;">Add</button>
                 <a href="{{ .Params.website }}" class="action-btn" style="font-size: 32px; margin-top: 20px; display: block; text-decoration: none; text-align: center;">Official Website</a>
             </div>
         </div>

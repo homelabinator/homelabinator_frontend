@@ -48,6 +48,16 @@ function showAppInfo(slug) {
     window.location.href = `/apps/${slug}`;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    updateUI();
-});
+function addAppAndReturn(slug) {
+    addApp(slug);
+    window.location.href = '/';
+}
+
+let carouselIndex = 0;
+function moveCarousel(n) {
+    const items = document.querySelectorAll('.carousel-item');
+    if (items.length === 0) return;
+    items[carouselIndex].classList.remove('active');
+    carouselIndex = (carouselIndex + n + items.length) % items.length;
+    items[carouselIndex].classList.add('active');
+}
