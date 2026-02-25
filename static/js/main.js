@@ -1,5 +1,39 @@
 let addedApps = new Set(JSON.parse(localStorage.getItem('addedApps') || '[]'));
 
+document.addEventListener('DOMContentLoaded', () => {
+    updateUI();
+    
+    const searchInput = document.querySelector('.search-bar input');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const appCards = document.querySelectorAll('.app-card');
+            
+            appCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const replaces = card.querySelector('.replaces').textContent.toLowerCase();
+                const tagline = card.querySelector('.tagline').textContent.toLowerCase();
+                
+                if (title.includes(query) || replaces.includes(query) || tagline.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Hide/Show empty categories
+            document.querySelectorAll('.category-pane').forEach(pane => {
+                const visibleCards = pane.querySelectorAll('.app-card[style="display: block;"], .app-card:not([style])');
+                if (visibleCards.length === 0) {
+                    pane.style.display = 'none';
+                } else {
+                    pane.style.display = 'block';
+                }
+            });
+        });
+    }
+});
+
 function addApp(slug) {
     if (addedApps.has(slug)) {
         console.log(`Removing app: ${slug}`);
@@ -24,12 +58,14 @@ function updateUI() {
     document.querySelectorAll('.app-card').forEach(card => {
         const slug = card.dataset.slug;
         const addButton = card.querySelector('.add-button');
-        if (addedApps.has(slug)) {
-            addButton.textContent = 'Added';
-            addButton.classList.add('added');
-        } else {
-            addButton.textContent = 'Add';
-            addButton.classList.remove('added');
+        if (addButton) {
+            if (addedApps.has(slug)) {
+                addButton.textContent = 'Added';
+                addButton.classList.add('added');
+            } else {
+                addButton.textContent = 'Add';
+                addButton.classList.remove('added');
+            }
         }
     });
 }
