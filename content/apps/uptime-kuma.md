@@ -7,10 +7,12 @@ replaces: "Better Stack"
 tagline: "Monitor your Services."
 long_description: "Uptime Kuma is an easy-to-use self-hosted monitoring tool."
 screenshots:
-  - "https://www.figma.com/api/mcp/asset/71b18af6-cfbe-43d6-9934-fb49247f2872"
-icon_link: "https://www.figma.com/api/mcp/asset/71b18af6-cfbe-43d6-9934-fb49247f2872"
-website: "https://uptime.kuma"
+  - "https://uptimekuma.org/wp-content/uploads/2025/01/Uptime-Kuma-Overview-1024x724.png"
+icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/uptime-kuma.svg"
+website: "https://uptimekuma.org/"
 docker_downloads: 1000000
-github_stars: 40000
+github_stars: 833000
 ---
-Uptime Kuma monitoring tool.
+Uptime Kuma is an open-source, free and easy-to-use self-hosted monitoring tool. Uptime Kuma is compatible with multiple platforms including Linux, Windows 10 (x64) and Windows Server.
+
+Monitoring uptime has never been easier and Uptime Kuma offers exactly this, with a simple but effective and powerful dashboard.

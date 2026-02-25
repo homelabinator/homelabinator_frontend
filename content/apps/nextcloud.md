@@ -7,10 +7,10 @@ replaces: "Google Drive, OneDrive"
 tagline: "Your personal cloud."
 long_description: "Nextcloud is the most deployed self-hosted content collaboration platform."
 screenshots:
-  - "https://www.figma.com/api/mcp/asset/71b18af6-cfbe-43d6-9934-fb49247f2872"
-icon_link: "https://www.figma.com/api/mcp/asset/71b18af6-cfbe-43d6-9934-fb49247f2872"
+  - "https://www.ateamsystems.com/wp-content/uploads/2017/11/NextCloud-Screenshot-1600x900.png"
+icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/nextcloud.svg"
 website: "https://nextcloud.com"
 docker_downloads: 50000000
-github_stars: 22000
+github_stars: 91000
 ---
-Nextcloud collaboration platform.
+Nextcloud offers a modern, on-premises content collaboration platform with real-time document editing, video chat & groupware on mobile, desktop and web.
