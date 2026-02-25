@@ -38,8 +38,8 @@
             </div>
             
             <div class="app-stats">
-                <p>GitHub Stars: {{ .Params.github_stars }}</p>
-                <p>Docker Downloads: {{ .Params.docker_downloads }}</p>
+                <p>GitHub Stars: {{ if ge .Params.github_stars 1000 }}{{ printf "%.1fk" (div .Params.github_stars 1000.0) }}{{ else }}{{ .Params.github_stars }}{{ end }}</p>
+                <p>Docker Downloads: {{ if ge .Params.docker_downloads 1000000 }}{{ printf "%.0fM+" (div .Params.docker_downloads 1000000.0) }}{{ else if ge .Params.docker_downloads 1000 }}{{ printf "%.0fk+" (div .Params.docker_downloads 1000.0) }}{{ else }}{{ .Params.docker_downloads }}{{ end }}</p>
                 <p>Size Requirements: Based on Media</p>
             </div>
 

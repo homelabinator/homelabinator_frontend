@@ -11,7 +11,7 @@ screenshots:
   - "https://www.audiobookshelf.org/showcase/library-books.png"
 icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/audiobookshelf.svg"
 website: "https://www.audiobookshelf.org/"
-docker_downloads: "1M +"
-github_stars: "11.8k"
+docker_downloads: 1000000
+github_stars: 11800
 ---
 Long description in markdown.

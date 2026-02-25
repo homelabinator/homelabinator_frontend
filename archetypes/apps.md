@@ -10,7 +10,7 @@ screenshots:
   - "https://via.placeholder.com/800x600"
 icon_link: "https://via.placeholder.com/128"
 website: "https://example.com"
-docker_downloads: "100M +"
-github_stars: "48.5k"
+docker_downloads: 0
+github_stars: 0
 ---
 Long description in markdown.

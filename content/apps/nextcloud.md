@@ -10,7 +10,7 @@ screenshots:
   - "https://www.figma.com/api/mcp/asset/71b18af6-cfbe-43d6-9934-fb49247f2872"
 icon_link: "https://www.figma.com/api/mcp/asset/71b18af6-cfbe-43d6-9934-fb49247f2872"
 website: "https://nextcloud.com"
-docker_downloads: "50M +"
-github_stars: "22k"
+docker_downloads: 50000000
+github_stars: 22000
 ---
 Nextcloud collaboration platform.

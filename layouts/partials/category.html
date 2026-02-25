@@ -7,10 +7,17 @@
         {{ $filtered := where $apps "Params.category" .category.name }}
         {{ $count := len $filtered }}
         
+        {{ $apps_with_scores := slice }}
+        {{ range $filtered }}
+            {{ $score := add .Params.github_stars .Params.docker_downloads }}
+            {{ $apps_with_scores = $apps_with_scores | append (dict "page" . "score" $score) }}
+        {{ end }}
+        {{ $sorted := sort $apps_with_scores "score" "desc" }}
+
         <div class="apps-grid-container {{ if gt $count 5 }}expandable{{ end }}">
             <div class="apps-grid" style="grid-template-columns: repeat({{ .category.max_width }}, 1fr);">
-                {{ range $filtered }}
-                    {{ partial "app-card.html" . }}
+                {{ range $sorted }}
+                    {{ partial "app-card.html" .page }}
                 {{ end }}
             </div>
         </div>

@@ -10,7 +10,7 @@ screenshots:
   - "https://www.figma.com/api/mcp/asset/71b18af6-cfbe-43d6-9934-fb49247f2872"
 icon_link: "https://www.figma.com/api/mcp/asset/71b18af6-cfbe-43d6-9934-fb49247f2872"
 website: "https://uptime.kuma"
-docker_downloads: "1M +"
-github_stars: "40k"
+docker_downloads: 1000000
+github_stars: 40000
 ---
 Uptime Kuma monitoring tool.

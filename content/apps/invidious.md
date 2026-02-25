@@ -10,7 +10,7 @@ screenshots:
   - "https://invidious.io/images/01_player.png"
 icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/invidious.svg"
 website: "https://invidious.io/"
-docker_downloads: "100M +"
-github_stars: "48.5k"
+docker_downloads: 100000000
+github_stars: 48500
 ---
 Invidious is an open source alternative front-end to YouTube.

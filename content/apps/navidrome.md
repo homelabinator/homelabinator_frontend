@@ -10,7 +10,7 @@ screenshots:
 - "https://www.navidrome.org/screenshots/spotify-ish.webp"
 icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/navidrome.svg"
 website: "https://navidrome.org"
-docker_downloads: "10M +"
-github_stars: "19.5k"
+docker_downloads: 10000000
+github_stars: 19500
 ---
 Navidrome is a self-hosted music server that lets you listen to your own music collection, wherever you are.

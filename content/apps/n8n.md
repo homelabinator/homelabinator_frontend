@@ -10,7 +10,7 @@ screenshots:
   - "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-screenshot-readme.png"
 icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg"
 website: "https://n8n.io"
-docker_downloads: "100M+"
-github_stars: "176k"
+docker_downloads: 100000000
+github_stars: 176000
 ---
 n8n is a fair-code licensed workflow automation tool.

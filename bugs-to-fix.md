@@ -1,1 +1,1 @@
-[x]
+[x] for the ordering of the apps, get the stars and docker_download numbers for each app and sort them based on descending order by adding the two numbers.
