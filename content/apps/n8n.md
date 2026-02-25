@@ -7,10 +7,10 @@ replaces: "Zapier, IFTTT"
 tagline: "Easily create workflows."
 long_description: "n8n is an extendable workflow automation tool that lets you connect anything to everything."
 screenshots:
-  - "https://www.figma.com/api/mcp/asset/c52822a8-63f8-4d01-9cac-151a198f1ef4"
-icon_link: "https://www.figma.com/api/mcp/asset/ef05b5eb-9c52-4f68-b1d0-cb4bac52393c"
+  - "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-screenshot-readme.png"
+icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg"
 website: "https://n8n.io"
-docker_downloads: "5M +"
-github_stars: "35k"
+docker_downloads: "100M+"
+github_stars: "176k"
 ---
 n8n is a fair-code licensed workflow automation tool.
