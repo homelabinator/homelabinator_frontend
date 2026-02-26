@@ -5,7 +5,7 @@ draft: false
 category: "Entertainment"
 replaces: "Service1, Service2"
 tagline: "Short tagline"
-long_description: "Long description here"
+docs_link: "https://docs.example.com"
 screenshots:
   - "https://via.placeholder.com/800x600"
 icon_link: "https://via.placeholder.com/128"

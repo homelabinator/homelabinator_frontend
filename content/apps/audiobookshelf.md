@@ -5,7 +5,6 @@ draft: false
 category: "Entertainment"
 replaces: "Audible, Libby"
 tagline: "Listen to your library."
-long_description: ""
 screenshots:
   - "https://www.audiobookshelf.org/showcase/series.png"
   - "https://www.audiobookshelf.org/showcase/library-books.png"
@@ -13,5 +12,6 @@ icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/audioboo
 website: "https://www.audiobookshelf.org/"
 docker_downloads: 1000000
 github_stars: 11800
+docs_link: "https://www.audiobookshelf.org/docs/"
 ---
-Long description in markdown.
+Audiobookshelf is an open-source self-hosted media server for your audiobooks and podcasts.

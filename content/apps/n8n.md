@@ -5,12 +5,12 @@ draft: false
 category: "Productivity"
 replaces: "Zapier, IFTTT"
 tagline: "Easily create workflows."
-long_description: "n8n is an extendable workflow automation tool that lets you connect anything to everything."
 screenshots:
   - "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-screenshot-readme.png"
 icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg"
 website: "https://n8n.io"
 docker_downloads: 100000000
 github_stars: 176000
+docs_link: "https://docs.n8n.io/"
 ---
-n8n is a fair-code licensed workflow automation tool.
+Build with the precision of code or the speed of drag-n-drop. Host with on-prem control or in-the-cloud convenience. n8n gives you more freedom to implement multi-step AI agents and integrate apps than any other tool.

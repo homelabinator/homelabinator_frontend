@@ -15,9 +15,9 @@
             <a href="/" style="text-decoration: none; color: inherit;"><h1 class="logo">HomeLabinator</h1></a>
         </div>
         <div class="header-center">
-            <div class="search-bar">
+            <div class="search-bar {{ if eq .Type "apps" }}disabled{{ end }}">
                 <img src="https://www.figma.com/api/mcp/asset/d8d8e99a-2e92-4b3d-9725-54326d0d0990" alt="Search" class="search-icon">
-                <input type="text" placeholder="Search for Apps and Replacements">
+                <input type="text" placeholder="Search for Apps and Replacements" {{ if eq .Type "apps" }}disabled{{ end }}>
             </div>
         </div>
         <div class="header-right">

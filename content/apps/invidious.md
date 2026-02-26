@@ -5,12 +5,12 @@ draft: false
 category: "Entertainment"
 replaces: "YouTube"
 tagline: "Stream with ease."
-long_description: ""
 screenshots:
   - "https://invidious.io/images/01_player.png"
 icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/invidious.svg"
 website: "https://invidious.io/"
 docker_downloads: 100000000
 github_stars: 48500
+docs_link: "https://docs.invidious.io/"
 ---
 Invidious is an open source alternative front-end to YouTube.

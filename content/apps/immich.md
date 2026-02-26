@@ -5,12 +5,12 @@ draft: false
 category: "Utility"
 replaces: "Google Photos"
 tagline: "Backup & Share your photos."
-long_description: "Immich is a high performance self-hosted photo and video backup solution."
 screenshots:
-  - "https://www.figma.com/api/mcp/asset/dfdbd61c-a2ec-444d-a161-54bd940ef5b8"
-icon_link: "https://www.figma.com/api/mcp/asset/dfdbd61c-a2ec-444d-a161-54bd940ef5b8"
+  - "https://immich.app/_app/immutable/assets/screenshot-dark.Cpoaie9r.webp"
+icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/immich.svg"
 website: "https://immich.app"
 docker_downloads: 500000
 github_stars: 30000
+docs_link: "https://docs.immich.app"
 ---
-Immich photo backup.
+Easily back up, organize, and manage your photos on your own server. Immich helps you browse, search and organize your photos and videos with ease, without sacrificing your privacy.

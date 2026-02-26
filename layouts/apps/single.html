@@ -5,12 +5,7 @@
     </a>
     <div class="app-info-modal">
         <div class="app-info-left">
-             <div class="app-info-header">
-                <div class="app-icon-container">
-                    <img src="{{ .Params.icon_link }}" alt="{{ .Title }}" width="268" class="app-icon">
-                </div>
-                <h1>{{ .Title }}</h1>
-            </div>
+             <h1 style="text-align: center;">{{ .Title }}</h1>
             
             <div class="screenshot-container">
                 {{ if gt (len .Params.screenshots) 1 }}
@@ -30,22 +25,35 @@
         </div>
         <div class="app-info-right">
             <div class="app-info-desc">
-                {{ .Params.long_description }}
+                <div class="app-icon-container">
+                    <img src="{{ .Params.icon_link }}" alt="{{ .Title }}" class="app-icon">
+                </div>
             </div>
-            
+
             <div class="app-markdown-content">
                 {{ .Content }}
             </div>
+
+            <div class="app-links app-card" data-slug="{{ .File.ContentBaseName }}" style="background: transparent; padding: 0; width: 100%; text-align: left;">
+                <button class="add-button" onclick="addAppAndReturn('{{ .File.ContentBaseName }}')" style="width: 100%; margin: 20px 0;">Add</button>
+            </div>
             
             <div class="app-stats">
-                <p>GitHub Stars: {{ if ge .Params.github_stars 1000 }}{{ printf "%.1fk" (div .Params.github_stars 1000.0) }}{{ else }}{{ .Params.github_stars }}{{ end }}</p>
-                <p>Docker Downloads: {{ if ge .Params.docker_downloads 1000000 }}{{ printf "%.0fM+" (div .Params.docker_downloads 1000000.0) }}{{ else if ge .Params.docker_downloads 1000 }}{{ printf "%.0fk+" (div .Params.docker_downloads 1000.0) }}{{ else }}{{ .Params.docker_downloads }}{{ end }}</p>
-                <p>Size Requirements: Based on Media</p>
-            </div>
-
-            <div class="app-links app-card" data-slug="{{ .File.ContentBaseName }}">
-                <button class="add-button" onclick="addAppAndReturn('{{ .File.ContentBaseName }}')" style="width: 100%; margin-top: 20px;">Add</button>
-                <a href="{{ .Params.website }}" class="action-btn" style="font-size: 32px; margin-top: 20px; display: block; text-decoration: none; text-align: center;">Official Website</a>
+                <p>GitHub Stars: <strong>{{ if ge .Params.github_stars 1000 }}{{ printf "%.1fk" (div .Params.github_stars 1000.0) }}{{ else }}{{ .Params.github_stars }}{{ end }}</strong></p>
+                <p>Docker Downloads: <strong>{{ if ge .Params.docker_downloads 1000000 }}{{ printf "%.0fM+" (div .Params.docker_downloads 1000000.0) }}{{ else if ge .Params.docker_downloads 1000 }}{{ printf "%.0fk+" (div .Params.docker_downloads 1000.0) }}{{ else }}{{ .Params.docker_downloads }}{{ end }}</strong></p>
+                <p>Size Requirements: <strong>Based on Media</strong></p>
+                <div class="stats-btns">
+                    <a href="{{ .Params.website }}" class="stats-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        Official Website
+                    </a>
+                    {{ if .Params.docs_link }}
+                    <a href="{{ .Params.docs_link }}" class="stats-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        Docs
+                    </a>
+                    {{ end }}
+                </div>
             </div>
         </div>
     </div>

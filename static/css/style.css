@@ -39,6 +39,12 @@ body {
     width: 500px;
 }
 
+.search-bar.disabled {
+    background: #e0e0e0;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 .search-icon {
     width: 30px;
     margin-right: 15px;
@@ -214,7 +220,7 @@ body {
     display: none;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 
 .carousel-item.active {
@@ -244,13 +250,13 @@ body {
 }
 
 .tagline {
-    font-size: 18px;
+    font-size: 20px;
     color: black;
     margin: 5px 0;
 }
 
 .replaces {
-    font-size: 15px;
+    font-size: 18px;
     font-style: italic;
     color: black;
     margin-bottom: 20px;
@@ -300,8 +306,9 @@ body {
 }
 
 .next-btn {
-    background: white;
-    border: 3px solid black;
+    background: #efeef6;
+    border: 5px solid var(--accent-blue);
+    color: var(--accent-blue);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -328,6 +335,10 @@ body {
     padding: 40px;
 }
 
+body:has(.app-info-page) .next-button-container {
+    display: none !important;
+}
+
 .app-info-modal {
     background: white;
     border: 5px solid black;
@@ -345,19 +356,20 @@ body {
 }
 
 .app-info-right {
-    width: 500px;
+    width: 400px;
 }
 
 .screenshot-container {
-    flex: 1;
+    width: 100%;
     display: flex;
     min-height: 0;
+    aspect-ratio: 16 / 9;
 }
 
 .screenshot-main {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     border-radius: 23px;
 }
 
@@ -373,6 +385,11 @@ body {
     margin: 0;
 }
 
+.app-info-modal .app-icon-container {
+    width: 120px;
+    height: 120px;
+}
+
 .app-info-desc {
     font-size: 36px;
     line-height: 1.4;
@@ -380,21 +397,47 @@ body {
 }
 
 .app-markdown-content {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .app-stats {
     background: #d9d9d9;
-    padding: 30px;
+    padding: 20px 30px;
     border-radius: 23px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .app-stats p {
-    font-size: 30px;
-    margin: 10px 0;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.stats-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.stats-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #efeef6;
+    border: 3px solid var(--accent-blue);
+    color: var(--accent-blue);
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.stats-btn svg {
+    width: 24px;
+    height: 24px;
 }
 
 /* Install Screen Redesign */
