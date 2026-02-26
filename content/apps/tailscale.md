@@ -14,3 +14,5 @@ docker_downloads: 50000000
 github_stars: 28700
 ---
 Tailscale deploys quickly and enables Zero Trust access to any resource on your network.
+
+**Note: This app requires an account with an external service. Follow [the quick start guide](https://tailscale.com/docs/how-to/quickstart) to get started.
