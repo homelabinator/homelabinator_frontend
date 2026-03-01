@@ -90,7 +90,7 @@ body {
 }
 
 .categories-container {
-    padding: 0 40px;
+    padding: 0 30px;
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -123,7 +123,7 @@ body {
 
 .category-content {
     background-color: var(--cat-color);
-    padding: 30px;
+    padding: 10px;
     border-radius: 0 50px 50px 50px;
     margin-top: -1px; /* Ensure overlap to prevent tiny gaps */
 }
@@ -134,11 +134,11 @@ body {
 
 .apps-grid {
     display: grid;
-    gap: 30px;
+    gap: 20px;
 }
 
 .app-card-wrapper {
-    display: block;
+    display: flex;
 }
 
 .app-card-wrapper.hidden-app {
@@ -152,6 +152,9 @@ body {
     border-radius: 30px;
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 
@@ -270,6 +273,8 @@ body {
 }
 
 .add-button {
+    margin-top: auto;
+    padding-top: 20px;
     background: #efeef6;
     border: 5px solid var(--accent-blue);
     color: var(--accent-blue);
@@ -282,6 +287,8 @@ body {
 }
 
 .add-button.added {
+    margin-top: auto;
+    padding-top: 20px;
     background: black;
     border-color: black;
     color: white;
