@@ -9,22 +9,24 @@
         
         {{ $apps_with_scores := slice }}
         {{ range $filtered }}
-            {{ $score := add .Params.github_stars .Params.docker_downloads }}
+            {{ $score := add (default 0 .Params.github_stars) (default 0 .Params.docker_downloads) }}
             {{ $apps_with_scores = $apps_with_scores | append (dict "page" . "score" $score) }}
         {{ end }}
         {{ $sorted := sort $apps_with_scores "score" "desc" }}
 
-        <div class="apps-grid-container {{ if gt $count 5 }}expandable{{ end }}">
+        <div class="apps-grid-container">
             <div class="apps-grid" style="grid-template-columns: repeat({{ .category.max_width }}, 1fr);">
-                {{ range $sorted }}
-                    {{ partial "app-card.html" .page }}
+                {{ range $index, $item := $sorted }}
+                    <div class="app-card-wrapper {{ if ge $index 5 }}hidden-app{{ end }}" data-index="{{ $index }}">
+                        {{ partial "app-card.html" $item.page }}
+                    </div>
                 {{ end }}
             </div>
         </div>
         
         {{ if gt $count 5 }}
         <div class="show-more-container">
-            <button class="show-more-btn" onclick="toggleCategory(this)">Show more</button>
+            <button class="show-more-btn" onclick="toggleCategory(this)">Show More</button>
         </div>
         {{ end }}
     </div>

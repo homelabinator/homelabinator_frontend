@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --accent-blue: #0088ff;
     --white: #ffffff;
@@ -124,30 +128,33 @@ body {
     margin-top: -1px; /* Ensure overlap to prevent tiny gaps */
 }
 
-.apps-grid-container.expandable {
-    max-height: 400px; /* One row approx */
+.apps-grid-container {
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.apps-grid-container.expanded {
-    max-height: 2000px;
 }
 
 .apps-grid {
-    display: flex;
+    display: grid;
     gap: 30px;
-    flex-wrap: wrap;
+}
+
+.app-card-wrapper {
+    display: block;
+}
+
+.app-card-wrapper.hidden-app {
+    display: none;
 }
 
 .app-card {
     background-color: var(--gray-bg);
-    width: 240px;
-    padding: 25px;
+    width: 270px;
+    padding: 20px;
     border-radius: 30px;
     position: relative;
     text-align: center;
 }
+
+
 
 .info-icon {
     position: absolute;
@@ -287,7 +294,7 @@ body {
 }
 
 .show-more-btn {
-    background: #efeef6;
+    background: whitesmoke;
     border: 5px solid var(--accent-blue);
     color: var(--accent-blue);
     padding: 10px 40px;
