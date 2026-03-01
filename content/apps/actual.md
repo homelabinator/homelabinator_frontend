@@ -8,7 +8,7 @@ tagline: "Your finances made simple."
 docs_link: "https://actualbudget.org/docs/"
 screenshots:
   - "https://via.placeholder.com/800x600"
-icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/actual.svg"
+icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/actual-budget.svg"
 website: "https://actualbudget.org"
 docker_downloads: 5000000
 github_stars: 15000
