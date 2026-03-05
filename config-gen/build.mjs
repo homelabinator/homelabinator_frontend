@@ -1,15 +1,21 @@
 import * as esbuild from 'esbuild';
 import { glob } from 'glob';
-import { writeFile, cp } from 'fs/promises';
+import { writeFile, cp, rm } from 'fs/promises';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-
-import { rm } from 'fs/promises';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 async function build() {
   await rm(join(__dirname, 'dist'), { recursive: true, force: true });
+  
+  const outDir = join(__dirname, '../static/js');
+  const templatesSrc = join(__dirname, 'templates');
+  const templatesDest = join(__dirname, '../static/templates');
+
+  // Mirror templates folder
+  await rm(templatesDest, { recursive: true, force: true });
+  await cp(templatesSrc, templatesDest, { recursive: true });
 
   const apps = await glob('templates/apps/*.nix.hbs', { cwd: __dirname });
   const services = await glob('templates/services/*', { cwd: __dirname });
@@ -31,7 +37,7 @@ async function build() {
         join(__dirname, 'src/config_generator/appstore.ts'),
     ],
     bundle: true,
-    outdir: join(__dirname, 'dist'),
+    outdir: outDir,
     format: 'esm',
     sourcemap: true,
     splitting: true,
