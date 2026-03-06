@@ -8,7 +8,7 @@ tagline: "Save the web, freely."
 docs_link: "https://doc.wallabag.org"
 screenshots:
   - "https://via.placeholder.com/800x600"
-icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/wallabag.svg"
+icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/wallabag-light.svg"
 website: "https://wallabag.org"
 docker_downloads: 5000000
 github_stars: 12500

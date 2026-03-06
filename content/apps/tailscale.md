@@ -8,7 +8,7 @@ tagline: "Secure your connections."
 docs_link: "https://tailscale.com/kb"
 screenshots:
   - "https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2024/01/tailscale-admin-console.png"
-icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tailscale.svg"
+icon_link: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/tailscale-light.svg"
 website: "https://tailscale.com"
 docker_downloads: 50000000
 github_stars: 28700
