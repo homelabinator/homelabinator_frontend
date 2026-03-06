@@ -22,7 +22,7 @@ services.k3s.manifests.{{app.name}}.content = [
               env = [
                 { name = "PUID"; value = "1000"; }
                 { name = "PGID"; value = "1000"; }
-                { name = "TZ"; value = "Etc/UTC"; }
+                { name = "TZ"; value = "America/Denver"; }
               ];
               ports = [
                 { containerPort = 8096; name = "http"; }
@@ -74,6 +74,21 @@ services.k3s.manifests.{{app.name}}.content = [
     };
     spec = {
       type = "ClusterIP";
+      selector.app = "{{app.name}}";
+      ports = [
+        { port = 8096; targetPort = 8096; name = "http"; }
+      ];
+    };
+  }
+  {
+    apiVersion = "v1";
+    kind = "Service";
+    metadata = {
+      name = "{{app.name}}-svc";
+      labels.app = "{{app.name}}";
+    };
+    spec = {
+      type = "NodePort";
       selector.app = "{{app.name}}";
       ports = [
         { port = 8096; targetPort = 8096; name = "http"; }
